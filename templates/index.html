@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Cat or Dog</title>
+</head>
+<body>
+   <form method="post" enctype="multipart/form-data">
+      <p><input type="file" id="file" name="file" accept="image/png, image/jpeg, image/jpg"><input type=submit value=Predict></p>
+      <p><input type="url" id="url" name="url"><input type=submit value=Predict></p>
+	</form>
+   
+   <img src="data:image/jpeg;base64,{{ img_data }}" id="img-upload" alt="img_data" class="img-upload"/>
+
+   <h2>{{prediction_text}}</h2>
+   <h4>Cat: {{cat_percentage}}%</h1>
+   <h4>Dog: {{dog_percentage}}%</h1>
+</body>
+</html> 
